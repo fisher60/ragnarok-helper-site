@@ -1,13 +1,27 @@
 import './App.css';
 import React from 'react';
-// import MapSvg from './assets/map.svg';
+
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+
+import { Home } from './components/home/Home';
 import { Map } from './components/Map';
+import { Navbar } from './components/navbar/Navbar';
 
 function App() {
 
   return (
     <div className="App">
-      <Map />
+      <Navbar />
+      <BrowserRouter>
+          <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="map" element={<Map />} />
+          </Routes>
+      </BrowserRouter>
     </div>
   )
 }
