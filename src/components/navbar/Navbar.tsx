@@ -1,17 +1,24 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from './Navlink';
+
 import './Navbar.css';
+
+const navLinkNames = [
+    {linkName: 'Home', linkURL: 'home'},
+    {linkName: 'Map', linkURL: 'map'}
+];
 
 export const Navbar = () => {
     return (
-        <nav className='block wt-full'>
+        <nav className='block wt-full text-white bg-blue-900'>
             <div className='flex wt-full justify-between h-24 items-center'>
-                <div className='ml-4 h-8'>Sleepy Kitty Guild</div>
-                <div className='mr-4 h-8'>Button</div>
+                <div className='ml-4 lg:ml-24 h-8 text-xl lg:text-3xl'>Sleepy Kitty Guild</div>
+                <div className='mr-6 h-8'>Button</div>
             </div>
 
-            <div className='flex flex-wrap h-auto lg:h-12 bg-teal-500'>
-                {[...Array(4)].map((e, i) => <Link key={i} to="about" className='block w-full h-10 lg:flex lg:border-2 lg:border-black lg:w-28 lg:h-full items-center bg-white bg-opacity-0 hover:bg-opacity-40 transition ease-in-out motion-reduce:bg-inherit'><span className='flex-initial w-full text-lg'>About</span></Link>)}
-                
+            <div className='block w-full content-center text-white bg-blue-500'>
+                <div className='flex flex-wrap w-full lg:w-5/6 mx-auto h-auto text-center lg:h-12'>
+                    {navLinkNames.map((i, e) => <NavLink key={e} linkName={i.linkName} linkURL={i.linkURL}/>)}
+                </div>
             </div>
         </nav>
     );
