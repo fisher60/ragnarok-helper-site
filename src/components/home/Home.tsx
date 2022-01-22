@@ -4,22 +4,34 @@ import groupPhoto from "./blob2.png";
 export const Home = () => {
     return (
         <div className="flex items-center lg:items-start flex-col lg:flex-row content-center w-full">
-            <div className="lg:ml-16 lg:mr-8 w-2/4">
-                <h1 className="text-4xl">Title</h1>
-                <img className="w-full lg:w-5/6" src={groupPhoto} />
-            </div>
-            <div className="lg:ml-8 lg:mr-16 w-2/4">
-                <h1 className="text-4xl">Info</h1>
-                <p>
-                    This is where I tell you all about our fancy guild. It has perks--probably. Like friendship and dog pics and... baking advice? Idk, just join us and we will be
-                    nice to you. Except on Wednesdays--on Wednesdays you can't sit with us.
+        
+            <div className="lg:flex pt-5 pb-10 lg:pb-20 flex-col lg:flex-row bg-white lg:text-white lg:bg-blue-900">
+                <div className="flex w-full items-center flex-col lg:ml-16 lg:mr-8 lg:w-2/4 lg:mt-5">
+                    <img className="w-full mt-5 lg:rounded-md" src={groupPhoto} />
+                </div>
 
-                    The world is a big and scary place. Don't talk to anyone ever, then you wil be safe. The internet is your only true friend. So stay on our website.
-                    And buy our products. Give us ad revenue. Very many words here. This is the worst part of web dev. I am putting my 90wpm to good use. That should be 100wpm though.
-                    I should reallypractice and step up my typing game. What is sitting at the computer literally all day good for if not to be show off my *maybe* slightly above
-                    average typing skills.
-                </p>
+                <div className="hidden lg:block w-5/6 mt-10 mb-10 lg:ml-8 lg:mr-16 lg:w-2/4">
+                    <p className="text-2xl mt-5 text-left leading-10">
+                        Have you ever craved adventure? Interested in making some new friends? Maybe you are just tired of dying over and over again to that pesky boss?  
+                        We are here to help!
+                        <br />
+                        <br />
+                        
+                         Come join us at the Sleepy Kitty Guild, where we play for more than just the game.
+                    </p>
+                </div>
+
             </div>
+                <div className="block lg:hidden w-5/6 mt-10 mb-10 lg:ml-8 lg:mr-16 lg:w-2/4">
+                    <p className="text-2xl text-left leading-9">
+                        Have you ever craved adventure? Interested in making some new friends? Maybe you are just tired of dying over and over again to that pesky boss?  
+                        We are here to help!
+                        <br />
+                        <br />
+                        
+                         Come join us at the Sleepy Kitty Guild, where we play for more than just the game.
+                    </p>
+                </div>
         </div>
     );
 }
