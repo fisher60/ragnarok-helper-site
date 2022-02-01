@@ -1,3 +1,21 @@
 .nav-wrapper{
     height: 250px;
 }
+
+.navCollapsed{
+    height: 0px;
+    -webkit-transition: height 0.75s ease-out;
+    -moz-transition: height 0.75s ease-out;
+    -o-transition: height 0.75s ease-out;
+    -ms-transition: height 0.75s ease-out;
+    transition: height 0.75s ease-out;
+}
+
+.navExpanded{
+    height: 75px;
+    -webkit-transition: height 0.75s ease-in;
+    -moz-transition: height 0.75s ease-in;
+    -o-transition: height0.0.75s ease-in;
+    -ms-transition: height 0.75s ease-in;
+    transition: height 0.75s ease-in;
+}
