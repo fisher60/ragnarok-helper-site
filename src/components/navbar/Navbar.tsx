@@ -17,8 +17,17 @@ export function Navbar() {
             <div className='flex justify-end w-full'>
                 <img onClick={() => navbarSwitch(!navbarActive)} src={hamburgerIcon} className='m-3 h-8 p-1 lg:hidden border-white border-2 rounded-md' />
             </div>
+
+            {/* Large screen navbar */}
+            <div className='hidden lg:block w-full'>
+                <div className='flex flex-wrap items-center w-full mx-auto h-auto text-center lg:h-12'>
+                    <h1 className="hidden lg:flex font-medium ml-8 mr-4 text-2xl">Sleepy Kitty Guild</h1>
+                    {navLinkNames.map((i, e) => <NavLink key={e} linkName={i.linkName} linkURL={i.linkURL}/>)}
+                </div>
+            </div>
             
-            <div className={navbarActive ? 'navExpanded' : 'navCollapsed' + ' navCollapsable w-full'}>
+            {/* Mobile navbar */}
+            <div className={navbarActive ? 'navExpanded' : 'navCollapsed' + ' w-full'}>
                 <div className='flex flex-wrap items-center w-full mx-auto h-auto text-center lg:h-12'>
                     <h1 className="hidden lg:flex font-medium ml-8 mr-4 text-2xl">Sleepy Kitty Guild</h1>
                     {navLinkNames.map((i, e) => <NavLink key={e} linkName={i.linkName} linkURL={i.linkURL}/>)}
