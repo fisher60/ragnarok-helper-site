@@ -5,9 +5,9 @@ export const Home = () => {
     return (
         <div className="flex items-center lg:items-start flex-col lg:flex-row content-center w-full">
         
-            <div className="lg:flex pt-5 pb-10 lg:pb-20 flex-col lg:flex-row bg-white lg:text-white lg:bg-blue-900">
+            <div className="lg:flex lg:pt-5 lg:pb-20 flex-col lg:flex-row bg-white lg:text-white lg:bg-blue-700">
                 <div className="flex w-full items-center flex-col lg:ml-16 lg:mr-8 lg:w-2/4 lg:mt-5">
-                    <img className="w-full mt-5 lg:rounded-md" src={groupPhoto} />
+                    <img className="w-full lg:mt-5 lg:rounded-md" src={groupPhoto} />
                 </div>
 
                 <div className="hidden lg:block w-5/6 mt-10 mb-10 lg:ml-8 lg:mr-16 lg:w-2/4">
