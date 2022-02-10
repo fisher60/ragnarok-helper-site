@@ -6,7 +6,7 @@ import './Navbar.css';
 
 const navLinkNames = [
     {linkName: 'Home', linkURL: '/'},
-    {linkName: 'Map', linkURL: 'map'}
+    // {linkName: 'Map', linkURL: 'map'}
 ];
 
 export function Navbar() {
